@@ -55,7 +55,7 @@ class AudioCtl(object):
 
     @cherrypy.expose
     def index(self):
-        fn = os.path.join(os.path.dirname(__file__), 'static/audioctl2.html')
+        fn = os.path.join(os.path.dirname(__file__), 'static/allplay.html')
         return open(fn).read()
     
     def request(self, url):
