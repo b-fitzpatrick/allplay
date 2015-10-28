@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AllPlay</title>
+  <link rel="manifest" href="/static/manifest.json">
+  <link rel="icon" sizes="192x192" href="/static/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="/static/icon-128x128.png">
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="/static/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="/static/themes/AudioCtl.min.css" />
+  <link rel="stylesheet" href="/static/audioctl2.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="panel" id="source" data-position="right" data-display="push">
+      <div>
+        <label for="sel-station" class="ui-hidden-accessible">Station</label>
+        <select name="sel-station" id="sel-station"></select>
+      </div>
+      <img id="pand_cover" src="" height="240" width="240">
+      <div class="nowPlaying">
+        <div id="pand_title"></div>
+        <div id="pand_artist"></div>
+        <div id="pand_album"></div>
+      </div>
+      <div id="pand_buttons" data-role="controlgroup" data-type="horizontal">
+        <button value="pand_down" class="ui-btn ui-icon-pand_down ui-btn-icon-notext">na</button>
+        <button id ="pand_up" value="pand_up" class="ui-btn ui-icon-pand_up ui-btn-icon-notext">na</button>
+        <button value="pand_playpause" class="ui-btn ui-icon-pand_playpause ui-btn-icon-notext">na</button>
+        <button value="pand_skip" class="ui-btn ui-icon-pand_skip ui-btn-icon-notext">na</button>
+      </div>
+      <div style="position:absolute;bottom:0">
+        <a id="reboot" href="#" class="ui-mini">Reboot Server</a>
+      </div>
+    </div><!-- /panel -->
+    <div data-role="header" data-position="fixed">
+      <a href="javascript:audioCtl.restart()" id="restart" class="ui-btn-left ui-hidden-accessible" data-role="button">Restart</a>
+      <h1>AllPlay</h1>
+      <a href="#source" class="ui-btn-right" data-role="button" id="btn-source">Source</a>
+    </div>
+    <div data-role="main" class="ui-content">
+      <form id="spkrs-form">
+        <div class="master" id="master-div">
+          <label for="act-master" class="act-check">MASTER</label>
+          <input type="checkbox" name="act-master" id="act-master" class="act-check">
+          <div class="vol" id="vol-master-div">
+            <input type="range" name="vol-master" id="vol-master" class="vol-slider" min="0" max="100" value="0" data-highlight="true">
+          </div>
+        </div>
+        <div id="spkrs-div"></div>
+      </form>
+    </div>
+  </div>
+  <script src="/static/audioctl2.js"></script>
+</body>
+</html>

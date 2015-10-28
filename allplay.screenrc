@@ -1,0 +1,7 @@
+# Screen startup file to start multiple commands under multiple screens.
+# Start with "screen -c thisfilename"
+
+chdir /home/pi/allplay
+screen -t allplay 0 bash -c 'python3 ./allplay.py'
+chdir /home/pi/.config/pianobar
+screen -t pianobar 1 bash -c 'pianobar'

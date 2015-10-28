@@ -1,0 +1,77 @@
+/* Use this when hiding the slider value box
+.ui-slider-track {
+    margin: 0 20px 0 20px;
+}
+*/
+
+.ui-slider {
+    position: relative;
+    top: -3px;
+}
+
+.nowPlaying {
+    text-align: center;
+}
+
+#pand_title {
+    font-weight: bold;
+}
+
+#pand_buttons {
+    text-align: center;
+}
+
+.btn-pand {
+    width: 26px;
+    vertical-align: middle;
+}
+
+.ui-icon-pand_down:after {
+    background-image: url("/static/icon_down.png");
+    background-size: 22px;
+    height: 32px;
+    width: 32px;
+    border-radius:16px;
+    margin-top:-16px;
+    margin-left:-16px;
+}
+
+.ui-icon-pand_up:after {
+    background-image: url("/static/icon_up.png");
+    background-size: 22px;
+    height: 32px;
+    width: 32px;
+    border-radius:16px;
+    margin-top:-16px;
+    margin-left:-16px;
+}
+
+.ui-icon-pand_up_set:after {
+    background-image: url("/static/icon_up_set.png");
+    background-size: 22px;
+    height: 32px;
+    width: 32px;
+    border-radius:16px;
+    margin-top:-16px;
+    margin-left:-16px;
+}
+
+.ui-icon-pand_playpause:after {
+    background-image: url("/static/icon_playpause.png");
+    background-size: 22px;
+    height: 32px;
+    width: 32px;
+    border-radius:16px;
+    margin-top:-16px;
+    margin-left:-16px;
+}
+
+.ui-icon-pand_skip:after {
+    background-image: url("/static/icon_skip.png");
+    background-size: 22px;
+    height: 34px;
+    width: 34px;
+    border-radius:17px;
+    margin-top:-17px;
+    margin-left:-17px;
+}

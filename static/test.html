@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+.ui-slider-track {
+    margin: 0 20px 0 20px;
+}
+hr {
+    color: #aaaaaa;
+    background-color: #aaaaaa;
+    border: none;
+    height: 1px;
+    width: 100%;
+}
+div.vol {
+    margin-bottom: 10px;
+    position: relative;
+    top: -2px;
+}
+</style>
+</head> 
+<body>
+  <div data-role="page">
+    <div data-role="panel" id="source" data-position="right" data-display="push">
+      <!-- panel content goes here -->
+      <h3>Source</h3>
+      <p>Add source interface here</p>
+    </div><!-- /panel -->
+    <div data-role="header"> 
+      <h1>AudioCtl</h1><a href="#source" class="ui-btn-right ui-btn-inline" data-role="button">Source</a>
+    </div> 
+    <div data-role="main" class="ui-content"> 
+      <form>
+        <div class="ui-hidden-accessible">
+          <label for="act-master">Master</label>
+          <input type="checkbox" name="act-master" id="act-master" checked disabled>
+          <div class="vol">
+            <input type="range" name="vol-master" id="vol-master" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+          </div>
+        </div>
+        <label for="act-0">Bedroom</label>
+        <input type="checkbox" name="act-0" id="act-0">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-0" id="vol-0" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-1">Ella's Speaker</label>
+        <input type="checkbox" name="act-1" id="act-1" checked>
+        <div class="vol">
+          <input type="range" name="vol-1" id="vol-1" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-2">Emily's Speaker</label>
+        <input type="checkbox" name="act-2" id="act-2">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-2" id="vol-2" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-3">Family Room</label>
+        <input type="checkbox" name="act-3" id="act-3">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-3" id="vol-3" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-4">Living Room</label>
+        <input type="checkbox" name="act-4" id="act-4">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-4" id="vol-4" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-5">Office Computer</label>
+        <input type="checkbox" name="act-5" id="act-5">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-5" id="vol-5" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+        <label for="act-6">Pool</label>
+        <input type="checkbox" name="act-6" id="act-6">
+        <div class="ui-hidden-accessible vol">
+          <input type="range" name="vol-6" id="vol-6" min="0" max="100" value="0" data-highlight="true" data-popup-enabled="true" class="ui-hidden-accessible">
+        </div>
+      </form>
+    </div>
+  </div>
+</body> 
+</html>
