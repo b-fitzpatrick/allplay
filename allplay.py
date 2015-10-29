@@ -531,7 +531,7 @@ class AudioCtl(object):
         
 import os.path
 conf = os.path.join(os.path.dirname(__file__), 'allplay.conf')
-cherrypy.engine.autoreload.frequency=10
+#cherrypy.engine.autoreload.frequency=10
 		
 if __name__ == '__main__':
     cherrypy.quickstart(AudioCtl(), config=conf)
